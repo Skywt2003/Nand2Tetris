@@ -15,4 +15,12 @@ CHIP Bit {
 
     PARTS:
     // Put your code here:
+    DFF(in=muxout, out=dffout, out=out);
+    Mux(a=dffout, b=in, sel=load, out=muxout);
+    // HDL is not a programing language, it is 
+    // an electrical circuit you are creating.
+    // So the order of the lines don't matter.
+    // Think of it this way. Each line adds
+    // a chip to a breadboard and adds wires
+    // to connect the ships together.
 }
